@@ -1,0 +1,497 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-GB">
+<head>
+	<title>Zalaris E-mail Signature Generator</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<script>
+
+	</script>
+	<script src="main.js"></script>
+	
+	<!-- THIRD PARTY LIBRARIES -->
+	<!-- For collapsible panels see - https://www.w3schools.com/bootstrap/bootstrap_collapse.asp -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Allows saving of signature files -->
+	<script type="text/javascript" src='filesaver.min.js'></script>
+	<script type="text/javascript" src='jszip.min.js'></script>
+	<!-- TinyMCE editor for corporate message editing -->
+	<script type="text/javascript" src='tinymce/tinymce.min.js'></script>
+	<script type="text/javascript">initialiseTinyMCE()</script>
+</head>
+
+<body>
+<div class="bodywrapper">
+
+<h1>&nbsp;&nbsp;E-mail Signature Generator</h1>
+
+<p>
+	<div class="info">
+		<table>
+			<tr>
+				<td><span class="info">&#x1F6C8;</span></td>
+				<td>
+					<ul>
+						<li class="info">Enter your details in the fields below and see it populate at the end of the page.</li>
+						<li class="info">Hover your mouse pointer over a field for handy tips.</li>
+						<li class="info">Select the title of a blue block to show/hide information.</li>
+						<li class="info">Under the Generated Template select Standard Signature or Out of Office Message to display the respective details entered.</li>
+						<li class="info">Copy the populated details and paste into your e-mail application to use it.</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+</p>
+
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#panel_signaturemandatory">Signature Details</a></h4></div>
+		<div id="panel_signaturemandatory" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Fill in each of these fields to build your e-mail signature.</p>
+
+				<table border="0">
+					<tr>
+						<td width="190px"><strong>First Name:</strong></td>
+						<td><input ID="INPUT-FIRSTNAME" type="text" size="60" onKeyUp="Preview();" class="mandatory" title="Enter your forename as it appears in your e-mail address."></input></td>
+					</tr>
+					<tr>
+						<td><strong>Surname:</strong></td>
+						<td><input ID="INPUT-SURNAME" type="text" size="60" onKeyUp="Preview();" class="mandatory" title="Enter your surname."></input></td>
+					</tr>
+					<tr>
+						<td><strong>Designation/Job Title:</strong></td>
+						<td><input ID="INPUT-JOBTITLE" type="text" size="60" value="" onKeyUp="Preview();" class="mandatory" title="Enter your official job title. e.g. SuccessFactors Consultant"></input></td>
+					</tr>
+					<tr>
+						<td><strong>Country:</strong></td>
+						<td><select id="INPUT-COUNTRY" onChange="countrySelectionUpdate();" class="mandatory" title="Select the Zalaris country operation that you work for." style="width:180px"><option>Loading...</option></select></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#panel_signatureoptional">Signature Details (Optional)</a></h4></div>
+		<div id="panel_signatureoptional" class="panel-collapse collapse">
+			<div class="panel-body">
+				<table border="0">
+					<tr>
+						<td colspan="2"><h4>Optional Communications Information</h4></td>
+					</tr>
+					<tr>
+						<td><strong>Mobile Number:</strong></td>
+						<td>
+							<input ID="INPUT-DIALCODE" type="text" size="4" onKeyUp="Preview();" class="sigoptional" title="Enter your international dialling code." value=""></input>
+							<input ID="INPUT-MOBILE" type="text" size="50" onKeyUp="Preview();" class="sigoptional" title="Enter your mobile phone number excluding the international dialling code." value=""></input>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>The international dialling code for <span id="OUTPUT-COUNTRY"></span> is <span id="OUTPUT-DIALCODE"></span>.</td>
+					</tr>
+					<tr>
+						<td width="240px" height="30px"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><strong>E-mail Address:</strong></td>
+						<td><input ID="INPUT-EMAIL" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Complete this if you would like to include your e-mail address in the signature."></input></td>
+					</tr>
+					<tr>
+						<td><strong>LinkedIn URL:</strong></td>
+						<td><input ID="INPUT-LINKEDIN" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Visit your LinkedIn profile, choose the option to share and copy the resulting URL."></input></td>
+					</tr>
+					<tr>
+						<td><strong>Xing URL:</strong></td>
+						<td><input ID="INPUT-XING" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Visit your Xing profile, choose the option to share and copy the resulting URL."></input></td>
+					</tr>
+					<tr>
+						<td><strong>Twitter Handle:</strong></td>
+						<td><input ID="INPUT-TWITTER" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Enter your personal Twitter page link, or just your Twitter handle."></input></td>
+					</tr>
+					<tr>
+						<td><strong>SCN Profile URL:</strong></td>
+						<td><input ID="INPUT-SCN" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Copy the URL from your browser location bar whilst viewing your SAP Community Network profile."></input></td>
+					</tr>
+					<tr>
+						<td width="240px" height="30px"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="2"><p>If you are working a shift pattern or part time, you can use this field to specify your working hours/days in your signature.</p></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><strong>Working Hours:</strong></td>
+						<td><input ID="INPUT-HOURS" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Specify what days/hours you work - e.g. Monday, Tuesday, Wednesday 09:00 - 17:00."></input></td>
+					</tr>
+					<tr>
+						<td colspan="2"><br><h4>Book a Meeting With</h4></td>
+					</tr>
+					<tr>
+						<td><strong>Text to Display:</strong></td>
+						<td><input ID="INPUT-MEETING-TEXT" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Specify the text to display - e.g. Book a meeting with Jane."></input></td>
+					</tr>
+					<tr>
+						<td><strong>Calendly Link:</strong></td>
+						<td><input ID="INPUT-MEETING-LINK" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Specify your Calendly booking URL."></input></td>
+					</tr>
+					<tr>
+						<td colspan="2"><br><h4>Optional Sign-off</h4></td>
+					</tr>
+					<tr>
+						<td colspan="2"><p title="If you need to style this part of your signature, the fields will accept HTML.">If you sign off your e-mails in the same way each time, you can add the details here.</p></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><strong>Sign-Off Phrase:</strong></td>
+						<td><input ID="INPUT-SIGNOFF" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Enter something like 'Kind regards.' if you wish to include that and your preferred name into the sign off."></input></td>
+					</tr>
+					<tr>
+						<td width="190px"><strong>Preferred Name:</strong></td>
+						<td><input ID="INPUT-PREFNAME" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Enter the name you would like to sign off your e-mails with - e.g. maybe you prefer using Liz to Elizabeth, or Jon to Jonathan."></input></td>
+					</tr>
+						<td colspan="2"><br><h4>Optional Corporate</h4></td>
+					</tr>
+					<tr>
+						<td colspan="2"><p>This option puts the zalaris web site URL and social entries on a single line, matching the communications line used if you specify personal communications options above. It works best for the UK&I icon-free layout.</p></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td width="240px"><strong>Combine Web Site and Social:</strong></td>
+						<td><input type="checkbox" ID="INPUT-CORP-WEB-SOCIAL-COMBINE" value="false" onchange="Preview();" title="Select to place the Zalaris web site on the same line as the company social media accounts." checked></input></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#panel_ooomandatory">Out of Office Details</a></h4></div>
+		<div id="panel_ooomandatory" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Fill in each of these fields to build your out of office message.</p>
+
+				<table border="0">
+					<tr>
+						<td width="190px"><strong>Line Manager Name:</strong></td>
+						<td colspan="2"><input ID="INPUT-LINEMGR" type="text" size="60" onKeyUp="Preview();" class="ooomandatory" title="Specify the first name and surname of your line manager or an alternative contact. Note, this is also used to generate their e-mail address."></input></td>
+					</tr>
+					<tr>
+						<td width="190px"><strong>Out of Office Start Date:</strong></td>
+						<td>
+							<input ID="INPUT-OOOSD-DD" type="text" size="2" onKeyUp="Preview();" class="ooomandatory" title="Specify the day of the month as a digit. e.g. 10"></input>&nbsp;
+
+							<select ID="INPUT-OOOSD-MMM" class="ooomandatory" onChange="Preview();" title="Select a month.">
+								<option value="January">January</option>
+								<option value="February">February</option>
+								<option value="March">March</option>
+								<option value="April">April</option>
+								<option value="May">May</option>
+								<option value="June">June</option>
+								<option value="July">July</option>
+								<option value="August">August</option>
+								<option value="September">September</option>
+								<option value="October">October</option>
+								<option value="November">November</option>
+								<option value="December">December</option>
+							</select>&nbsp;
+
+							<input ID="INPUT-OOOSD-YYYY" type="text" size="4" onKeyUp="Preview();" class="ooomandatory" title="Specify the year as four digits. e.g. 2020"></input>
+						</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td><strong>Out of Office End Date:</strong></td>
+						<td>
+							<input ID="INPUT-OOOED-DD" type="text" size="2" onKeyUp="Preview();" class="ooomandatory" title="Specify the day of the month as a digit. e.g. 10"></input>&nbsp;
+
+							<select ID="INPUT-OOOED-MMM" class="ooomandatory" onChange="Preview();" title="Select a month.">
+								<option value="January">January</option>
+								<option value="February">February</option>
+								<option value="March">March</option>
+								<option value="April">April</option>
+								<option value="May">May</option>
+								<option value="June">June</option>
+								<option value="July">July</option>
+								<option value="August">August</option>
+								<option value="September">September</option>
+								<option value="October">October</option>
+								<option value="November">November</option>
+								<option value="December">December</option>
+							</select>&nbsp;
+
+							<input ID="INPUT-OOOED-YYYY" type="text" size="4" onKeyUp="Preview();" class="ooomandatory" title="Specify the year as four digits. e.g. 2020"></input>
+						</td>
+						<td>&nbsp;<span ID="RETURNDATE"></span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#panel_ooooptional">Out of Office Details (Optional)</a></h4></div>
+		<div id="panel_ooooptional" class="panel-collapse collapse">
+			<div class="panel-body">
+				<table border="0">
+					<tr>
+						<td colspan="2"><p>By specifying the type of absence, you can tailor the out of office message. It always defaults to a general out of office message; this setting is not saved between sessions.</p></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td width="240px"><strong>Leave Type:</strong></td>
+						<td>
+							<select id="INPUT-TYPEOFLEAVE" onchange="Preview();" title="Select the type of leave being taken.">
+								<!-- Options populated from JSON -->
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td width="240px" height="30px"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="2"><p>If you are available for contact in an urgent situation while you are on leave, check this box to add the relevnt entry to your out of office message. Please note that many such messages require your mobile number, which is entered in the optional signature details section.</p></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td width="240px"><strong>Enable Available in Urgent Cases:</strong></td>
+						<td><input type="checkbox" ID="URGENCYMSG" value="false" onchange="countrySelectionUpdate();" title="Select to enable the 'if urgent, you can contact me on' element in your out of office message."></input></td>
+					</tr>
+					<tr>
+						<td width="240px" height="30px"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="2"><p>Some country support teams have a standard message that support team staff should include on their out of office message.</p></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td width="240px"><strong>Enable Support Message:</strong></td>
+						<td><input type="checkbox" ID="SUPPORTMSG" value="false" onchange="countrySelectionUpdate();" title="Select to enable the standard support team information in your out of office message."></input></td>
+					</tr>
+				</table>
+				<p>
+					<div class="supportmsg">
+						<span class="supp">Support Message For <span id="OUTPUT-SUPPORT-MSG-COUNTRY"></span>:</span><br>
+						<span id="OUTPUT-SUPPORT-MSG"></span>
+					</div>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#panel_additional_optional">Additional Settings (Optional)</a></h4></div>
+		<div id="panel_additional_optional" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>The settings in this section will apply to both the e-mail signature and the out of office message.</p>
+				<table border="0">
+					<tr>
+						<td colspan="2"><p>If you have filled in the details for your out-of-office in advance, you can automatically add a line to your e-mail signature noting to people when your next set of planned leave is occurring.</p></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td width="240px"><strong>Enable Upcoming Leave Message:</strong></td>
+						<td><input type="checkbox" ID="AWAYMSG" value="false" onchange="Preview();" title="Enable to display a notice about upcoming leave in your email signature."></input></td>
+					</tr>
+					<tr>
+						<td width="240px" height="30px"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="2"><p>The latest country message is shown here. This is usually used to highlight things such as upcoming conferences, product releases, charitable support, etc.  Enabling this option will display the message in the e-mail signature and out-of-office message.  You can amend the details, but please note that any refresh or change in country will reload the original message. Click on the page background to force the preview to refresh.</p></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td width="240px"><strong>Enable Country Message:</strong></td>
+						<td><input type="checkbox" ID="OPTMSG" value="false" onchange="Preview();" title="Select to enable the inclusion of the (editable) message below."></input></td>
+					</tr>
+					<tr>
+						<td width="240px" height="5px"></td>
+						<td></td>
+					</tr>
+				</table>
+
+				<!-- TinyMCE editor (replacement for ckeditor) -->
+				<textarea id="INPUT-MESSAGE" onChange="Preview();" title="Amend the country message by editing it here. This can also be used for local or global team content by just overtyping the content."></textarea>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#panel_settings">Settings Storage</a></h4></div>
+		<div id="panel_settings" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Select the <em>Save</em> button to save your current data to a set of browser cookies. You can then load them in again next time using the <em>Load Settings</em> button assuming that you are on the same computer, using the same browser, and that you have not cleared your browser cookies.</p>
+
+				<p>
+					<button type="button" onclick="SaveSettings();">Save Settings</button>&nbsp;
+					<button type="button" onclick="LoadSettings();">Load Settings</button>
+				</p>
+
+				<table border="0">
+					<tr>
+						<td width="240px"><strong>Enable Auto Load:</strong></td>
+						<td><input type="checkbox" ID="AUTOLOAD" value="false" title="Select to enable the automatic loading of saved settings when you visit this page."></input></td>
+					</tr>
+				</table>
+
+				<p>
+					<span ID="status"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr class="midsep">
+
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#panel_richoutput">Generated Template</a></h4></div>
+		<div id="panel_richoutput" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Select the type of template you want to display.  It will update as you change the data above. You can then copy and paste the section between the <em>cut lines</em> into your e-mail application to use it.</p>
+
+				<table>
+					<tr>
+						<td width="50%" valign="top">
+							<table border="0">
+								<tr>
+									<td><strong>Template:</strong>
+									<select id="INPUT-TEMPLATE" onChange="templateSelectionUpdate();" title="Select a template"><option>Loading...</option></select></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+					
+				<br />
+
+				<p class="cut-top">- &#9986; - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+					<div id="OUTPUT-PREVIEW" class="output" style="">
+
+						<!-- OUT OF OFFICE: Country Settings Driven -->
+						<!-- Standard thanks for contacting me message when out of office -->
+						<span id="INPUT-OOOTHANKS-PREVIEW"></span>
+
+						<!-- OUT OF OFFICE: Country Settings Driven -->
+						<!-- Specifies a standard message for use by support team members -->
+						<span id="INPUT-MSG-SUPPORT-PREVIEW"></span>
+
+						<!-- OUT OF OFFICE: Country Settings Driven -->
+						<!-- Standard out of office statement -->
+						<span id="INPUT-OOOMSG-PREVIEW"></span>
+
+						<!-- SIGNATURE: User Specified -->
+						<!-- Sign off from e-mail, e.g. "Regards, Stephen" -->
+						<div><span id="INPUT-SIGNOFF-PREVIEW"></span></div>
+
+						<!-- BOTH: User Specified -->
+						<!-- Full Name -->
+						<span id="INPUT-NAME-PREVIEW"></span>
+
+						<!-- BOTH: User Specified -->
+						<!-- Job Title/Designation -->
+						<span id="INPUT-DESIGNATION-PREVIEW"></span>
+
+						<!-- BOTH: User Specified -->
+						<!-- Mobile Phone Number (+ own social links) -->
+						<span id="INPUT-COMMS-PREVIEW"></span>
+
+						<!-- SIGNATURE: User Specified -->
+						<!-- Used to specify atypical working patterns - e.g. part time/shift work/return to work -->
+						<span id="INPUT-HOURS-PREVIEW"></span>
+
+						<!-- BOTH: Country Settings Driven -->
+						<!-- Zalaris Logo -->
+						<span id="INPUT-LOGO-PREVIEW"></span>
+
+						<!-- BOTH: Company Settings Driven -->
+						<!-- Corporate mission -->
+						<span id="INPUT-CORPORATE-MISSION-PREVIEW"></span>
+						
+						<!-- SIGNATURE: User Specified -->
+						<!-- Upcoming leave information -->
+						<span id="INPUT-MSG-AWAY-PREVIEW"></span>
+
+						<p>
+							<!-- BOTH: Country Settings Driven -->
+							<!-- Zalaris Tag Line -->
+							<div id="INPUT-TAGLINE-PREVIEW"></div>
+
+							<!-- BOTH: Country Settings Driven -->
+							<!-- Zalaris Web site-->
+							<div id="INPUT-WEBSITE-LINK-PREVIEW"></div>
+						</p>
+
+						<!-- BOTH: Company Settings Driven -->
+						<!-- Zalaris Social Media Links -->
+						<div id="INPUT-ZALARISLINKS-PREVIEW"></div>
+
+						<!-- BOTH: User Specified -->
+						<!-- Special Links -->
+						<span id="INPUT-SPECIAL-LINKS"></span>
+
+						<!-- BOTH: Country Settings Driven -->
+						<!-- Corporate message -->
+						<div id="INPUT-CORP-MESSAGE-PREVIEW"></div>
+						
+						<!-- BOTH: Country Settings Driven -->
+						<!-- Legal disclaimer information -->
+						<div id="INPUT-MAILDISCLAIMER-PREVIEW"></div>
+					</div>
+				<p class="cut-bottom">- &#9986; - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+
+				<p>
+					<button type="button" onclick="exportSettings();">Export to File</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#panel_htmloutput">HTML Source for Template</a></h4></div>
+		<div id="panel_htmloutput" class="panel-collapse collapse">
+			<div class="panel-body">
+				<textarea ID="OUTPUT-HTML" cols="120" rows="30" title="This is the raw HTML that generates the template above.">This area will be populated with HTML once you start amending the initial template above.</textarea>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr class="midsep">
+
+&nbsp;<em>Version 2.2.</em><br/>&nbsp;
+</div>
+
+<!-- This hidden section will contain the images for download. -->
+<div id="IMGTEMP" style="visibility: hidden;"></div>
+
+<script>
+	//Initialise "all the things"
+	main();
+</script>
+
+</body>
+</html>

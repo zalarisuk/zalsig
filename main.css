@@ -1,0 +1,131 @@
+body
+{
+	background-color: #FEFEFA;
+	margin:10px;
+}
+
+a
+{
+	color: #337ab7;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+td
+{
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+}
+
+hr.midsep
+{
+	background-color: #2E4F76;
+	height: 2px;
+	border-width: 0px;
+}
+
+input.mandatory
+{
+	background-color: #E1E1FF;
+}
+
+select.mandatory
+{
+	background-color: #E1E1FF;
+}
+
+input.sigoptional
+{
+	background-color: #FFEAC4;
+}
+
+input.ooomandatory
+{
+	background-color: #E1E1FF;
+}
+
+select.ooomandatory
+{
+	background-color: #E1E1FF;
+}
+
+input.ooooptional
+{
+	background-color: #FFEAC4;
+}
+
+select.ooooptional
+{
+	background-color: #FFEAC4;
+}
+
+p.cut-top
+{
+	color: darkred;
+	font-size: 150%;
+	font-weight: bold;
+	border-bottom: 1px solid whitesmoke;
+}
+
+p.cut-bottom
+{
+	color: darkred;
+	font-size: 150%;
+	font-weight: bold;
+	border-top: 1px solid whitesmoke;
+}
+
+li.info
+{
+	line-height: 10px;
+	height: 10px;
+	color: #004F9E;
+	font-weight: bold;
+}
+
+span.supp
+{
+	font-weight: bold;
+	color: #004F9E;
+}
+
+span.info
+{
+	color: #004F9E;
+	font-size: 35pt;
+}
+
+div.output
+{
+	background-color: white;
+}
+
+div.supportmsg
+{
+	background-color: aliceblue;
+}
+
+div.bodywrapper
+{
+	background-color: snow;
+	max-width: 1200px;
+	margin: auto;
+	border: 3px solid #004F9E;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.info
+{
+	background-color: #B9E8F8;
+	color: #000000;
+	padding: 10px;
+	width: 100%;
+}
+
+.panel-heading
+{
+	color: white !important;
+	background-color: #004F9E !important;
+}
+
