@@ -1,0 +1,325 @@
+{
+	"panel_signature_mandatory_open" : true,
+	"panel_signature_optional_open" : false,
+	"panel_ooo_mandatory_open" : true,
+	"panel_ooo_optional_open" : false,
+	"panel_additional_optional_open" : false,
+	"panel_settings_open" : true,
+	"panel_rich_template_open" : true,
+	"panel_html_template_open" : false,
+	"signoff_prefix" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">",
+	"signoff_suffix" : "</span>",
+	"name_prefix" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">",
+	"name_suffix" : "</span><br />",
+	"designation_prefix" : "<span style=\"font-weight:normal; color:#000000; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><em>",
+	"designation_suffix" : "</em></span><br />",
+	"comms_prefix" : "<span style=\"font-weight:normal; color:#000000; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><em>",
+	"comms_separator" : "<span style=\"font-weight:bold; color:#E9580C; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"> | </span>",
+	"comms_suffix" : "</em></span>",
+	"comms_start" : "",
+	"comms_end" : "<br/>",
+	"comms_domain" : "@zalaris.com",
+	"website_prefix" : "<span style=\"font-weight:normal; color:#000000; font-size:9pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">",
+	"website_suffix" : "</span><br />",
+	"msg_away_prefix" : "<span style=\"color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><strong>Upcoming Leave:</strong> ",
+	"msg_away_period_join" : " to ",
+	"msg_away_suffix" : ".</span>",
+	"msg_hours_prefix" : "<span style=\"font-style:italic; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Working Hours: ",
+	"msg_hours_suffix" : "</span>",	
+	"mission" : "<p><span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">We simplify HR and payroll administration, and empower you with useful information so that you can invest more in people.</span></p>",
+	"images" : ["logo.png", "some_facebook.png", "some_linkedin.png", "some_twitter.png"],
+	"countries" :
+	{
+		"Norway" :
+		{
+			"website_name" : "www.zalaris.com",
+			"website_url" : "https://zalaris.com",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris Norway office on +47 4000 3300.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "",
+			"msg_support" : "",
+			"dialcode" : "+47",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"Germany" :
+		{
+			"website_name" : "zalaris.de",
+			"website_url" : "https://zalaris.de",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris Germany office on +49 4193 7532-0.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "<p style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Die ZALARIS Deutschland AG ist im Mai 2018 aus der sumarum AG hervorgegangen. Sie gehört zur börsennotierten ZALARIS ASA aus Norwegen - mit rund 900 Mitarbeitern in 13 Ländern, davon allein 250 in Deutschland. Wir sind SAP Partner und Komplettdienstleister mit einem Leistungsspektrum von IT Lösungen und Prozessberatung für alle backoffice relevanten Bereiche mit Schwerpunkt auf HR und Accounting.</p><p style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">ZALARIS Deutschland AG  HRB 8473 KI Amtsgericht Kiel USt.ID: DE 213923616 Aufsichtsratsvorsitzender: Hans-Petter Mellerud<br/>Vorstandsvorsitzender: Harald Goetsch; Vorstand: Lutz Friedrich, Volker Müller, Frank Wortmann</p>",
+			"msg_support" : "",
+			"dialcode" : "+49",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"Sweden" :
+		{
+			"website_name" : "www.zalaris.com",
+			"website_url" : "https://zalaris.com",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris Sweden office on +46 (0)8 564 88 200.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "",
+			"msg_support" : "",
+			"dialcode" : "+46",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"Denmark" :
+		{
+			"website_name" : "www.zalaris.com",
+			"website_url" : "https://zalaris.com",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris Denmark office on +45 7021 0530.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "",
+			"msg_support" : "",
+			"dialcode" : "+45",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"Finland" :
+		{
+			"website_name" : "www.zalaris.com",
+			"website_url" : "https://zalaris.com",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris Finland office on +358 9777 1440.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "",
+			"msg_support" : "",
+			"dialcode" : "+358",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"UK&I" :
+		{
+			"website_name" : "zalaris.com",
+			"website_url" : "https://zalaris.com",
+			"company_social_separator" : "<span style=\"font-weight:bold; color:#E9580C; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"> | </span>",
+			"company_social_start" : "<p style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\">LinkedIn</a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\">Twitter</a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\">Facebook</a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris UK&I office on +44 1932 213250.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "<p style=\"font-weight:normal; color:#707070; font-size:8pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Zalaris UK&I (part of the Zalaris ASA group) is the operating name of Zalaris Consulting UK Limited which is a private limited company registered in England, number 03538201, with registered address 62 Wilson Street, London, England, EC2A 2BU. Please see our <a href=\"http://zalaris.co.uk/offices/\">UK & Ireland Our Offices</a> page for postal addresses. All e-mails, including any associated resources, are intended only for the addressee named above and may contain confidential or privileged information. Please read our full <a href=\"http://zalaris.co.uk/about-zalaris/site-content/email-disclaimer/\">Email Disclaimer</a> for more details.</p>",
+			"msg_support" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>For all customer support requests please do one of the following<ul><li>If this is a new support request please raise via the Zalaris UK&I Support Portal at <a href=\"http://zalaris.co.uk/help-desk/\">http://zalaris.co.uk/help-desk</a>, or forward to <a href=\"mailto:rocsupport@roc-group.com\">rocsupport@roc-group.com</a>.</li><li>If this is an update to an existing support request then please update TOPdesk directly or reply to a TOPdesk e-mail for this request in the normal way.</li><li>If you have any problems accessing the Zalari UK&I Support Portal please contact Melissa Lake on 01932 213255 or by email at <a href=\"mailto:melissa.lake@zalarcom\">melisslake@zalaris.com</a>.</li></ul></p></span>",
+			"dialcode" : "+44 for the UK and +353 for Ireland",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"Poland" :
+		{
+			"website_name" : "zalaris.pl",
+			"website_url" : "https://zalaris.pl",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris Poland office on +48 22 307 48 60.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "",
+			"msg_support" : "",
+			"dialcode" : "+48",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"Latvia" :
+		{
+			"website_name" : "www.zalaris.com",
+			"website_url" : "https://zalaris.com",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris Latvia office on +371 27 525 742.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "",
+			"msg_support" : "",
+			"dialcode" : "+371",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"Lithuania" :
+		{
+			"website_name" : "www.zalaris.com",
+			"website_url" : "https://zalaris.com",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris Lithuania office on +371 27 525 742.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "",
+			"msg_support" : "",
+			"dialcode" : "+370",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"Estonia" :
+		{
+			"website_name" : "www.zalaris.com",
+			"website_url" : "https://zalaris.com",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris Estonia office on +371 27 525 742.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "",
+			"msg_support" : "",
+			"dialcode" : "+372",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		},
+		"India" :
+		{
+			"website_name" : "www.zalaris.com",
+			"website_url" : "https://zalaris.com",
+			"company_social_separator" : "&nbsp;",
+			"company_social_start" : "<p>",
+			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\"><img src=\"some_linkedin.png\" alt=\"LinkedIn Link\" title=\"LinkedIn\"></a>",
+			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\"><img src=\"some_twitter.png\" alt=\"Twitter Link\" title=\"Twitter\"></a>",
+			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\"><img src=\"some_facebook.png\" alt=\"Facebook Link\" title=\"Facebook\"></a>",
+			"company_social_end" :"</p>",
+			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
+			"msg_ooo_main_start" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\"><p>I will review your email upon my return. In my absence, if you need urgent assistance, please:<ul><li>Contact the Zalaris India office on +91 44 46814300.</li><li>Forward your email to my line manager <span ID=\"X-MANAGER\"></span> - <span ID=\"X-MANAGEREMAIL\"></span></li>",
+			"msg_ooo_main_urgent" : "<li>If it is really urgent, please text <span ID=\"X-MOBILE\"></span>, although I may have limited opportunity to respond.",
+			"msg_ooo_main_end" : "</li></ul></p></span>",
+			"legal_info" : "<p style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Zalaris India (part of the Zalaris ASA group) is the operating name of Zalaris HR Services India Private Limited which is a private limited company registered in India, CIN: U72200TN2010PTC075391 with registered address No.40, 2nd floor, Block B, Global Infosity Park, Dr. MGR, Road, Perungudi, Chennai - 96. Email including any attachments is intended only for the addressee named above and it may contain confidential or privileged information.</p>",
+			"msg_support" : "",
+			"dialcode" : "+91",
+			"tagline" : "<span style=\"font-weight:normal; font-size:10pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Follow us to</span><br /><span style=\"font-weight:bold; font-size:11pt; text-align:left; font-family: Arial, Helvetica, sans-serif;\">Simplify work life. Achieve more.</span><br/>",
+			"logo" : "<p><br/><img src=\"logo.png\" alt=\"Zalaris Logo\" title=\"Zalaris\"/><br/></p>",
+			"msg_corporate" : ""
+		}
+	},
+	"templates" : 
+	{
+		"Standard Signature" :
+		{
+			"msg_signoff" : true,
+			"msg_away" : true,
+			"msg_support" : false,
+			"msg_hours" : true,
+			"msg_ooo_thanks" : false,
+			"msg_ooo_main" : false
+		},
+		"Out of Office Message" :
+		{
+			"msg_signoff" : true,
+			"msg_away" : false,
+			"msg_support" : true,
+			"msg_hours" : false,
+			"msg_ooo_thanks" : true,
+			"msg_ooo_main" : true
+		}
+	},
+	"leave" :
+	{
+		"out" : 
+		{
+			"name" : "Out of the Office",
+			"none" : "I am currently out of the office.",
+			"single" : "I am currently out of the office and will be returning on $1.",
+			"range" : "I will be out of the office from $1 to $2."
+		},
+		"vacation" :
+		{
+			"name" : "On Leave",
+			"none" :   "I am currently on annual leave.",
+			"single" : "I am currently on annual leave and will return to work on $1.",
+			"range" :  "I am currently on annual leave from $1 to $2."
+		},
+		"training" : 
+		{
+			"name" : "On a Training Course",
+			"none" :   "I am currently on a training course.",
+			"single" : "I am currently on a training course and will return to work on $1.",
+			"range" :  "I am on a training course between $1 and $2."
+		},
+		"overseas" : 
+		{
+			"name" : "Working Overseas",
+			"none" :   "I am currently working outside of the country with limited access to email.",
+			"single" : "I am currently working outside of the country with limited access to email and will return to work on $1.",
+			"range" :  "I am currently working outside of the country with limited access to email from $1 to $2."
+		},
+		"ill" : 
+		{
+			"name" : "Ill",
+			"none" :   "I am currently unwell and will return to work as soon as I am able.",
+			"single" : "I am currently unwell and expect to return on $1.",
+			"range" :  "I am currently unwell and expect to be out of the office from $1 to $2."
+		}
+	}
+}
+
