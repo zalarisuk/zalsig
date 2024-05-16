@@ -64,6 +64,7 @@
 			"company_social_linkedin" : "<a href=\"https://www.linkedin.com/company/zalaris/\">LinkedIn</a>",
 			"company_social_twitter" : "<a href=\"https://twitter.com/Zalaris\">Twitter</a>",
 			"company_social_facebook" : "<a href=\"https://www.facebook.com/ZalarisASA/\">Facebook</a>",
+			"company_social_end" :"</p>",
 			"company_speciallink_start" : "<p><span style=\"font-weight:normal; color:#E9580C; font-size:11pt; text-align:left; font-family: Calibri, Arial, sans-serif;\">",
 			"company_speciallink_end" : "📢&nbsp;<a href=\"https://zalaris.com/newsletter/\">Subscribe to Zalaris Newsletter</a></span></p>",
 			"msg_ooo_thanks" : "<span style=\"font-weight:normal; color:#000000; font-size:11pt; text-align:left; font-family: Calibri, Arial, sans-serif;\"><p>Thank you for your email. <span ID=\"X-DATE\"></span></p></span>",
