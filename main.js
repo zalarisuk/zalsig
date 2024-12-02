@@ -1,21 +1,21 @@
-//I don't like using glbal variables, but sometimes they are a clean and simple choice
-//versus passing data all over the place
-//Global variable for holding the JSON data from the settings file (main.json)
-var g_jsonData = {};
-//initialise the logo so we don't try and load it before it even exists - gotta love asynchronous processing.
-g_jsonData.logo = '';
-//Global variable for holding the list of export templates
-var g_listTemplatesText = new Array();
-//Global variable for holding the data vaule associated with an export template
-var g_listTemplatesValue = new Array();
-//Default cookie duration (days) - no one likes a stale cookie.
-const intCookieLife = 9999;
+//attempt to avoid global variables
 
+(async function () {
 
-//Initialise everything with this
-//Loads the configuration JSON
-async function main()
-{
+	//JSON data from the settings file (main.json)
+	var g_jsonData = {};
+	//initialise the logo so we don't try and load it before it even exists - gotta love asynchronous processing.
+	g_jsonData.logo = '';
+	//list of export templates
+	var g_listTemplatesText = new Array();
+	//data value associated with an export template
+	var g_listTemplatesValue = new Array();
+	//Default cookie duration (days) - no one likes a stale cookie.
+	const intCookieLife = 9999;
+
+	//Initialise everything with this
+	//Load the configuration JSON
+
 	//Default the out of office month to this month
 	let astrMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	document.getElementById('INPUT-OOOED-MMM').value = astrMonths[new Date().getMonth()];
@@ -50,12 +50,10 @@ async function main()
 	initialiseImagesForDownload();
 
 	Preview();
-}
-
 
 //Populate the list of countries
 //This is achieved by enumerating the countries keys in the JSON
-function setupCountries()
+setupCountries = function ()
 {
 	let astrCountriesHTML = [];
 	Object.keys(g_jsonData.countries).forEach(function(key)
@@ -68,7 +66,7 @@ function setupCountries()
 
 //Populate the export templates drop down list
 //This is achieved by enumerating the templates keys in the JSON
-function setupTemplates()
+setupTemplates = function ()
 {
 	let strTemplatesHTML = [];
 	Object.keys(g_jsonData.templates).forEach(function(key)
@@ -81,7 +79,7 @@ function setupTemplates()
 
 //Populate the list of leave options
 //This is achieved by enumerating the leave keys and name sub-values in the JSON
-function setupLeaveOptions()
+setupLeaveOptions = function ()
 {
 	let astrLeaveHTML = [];
 	Object.keys(g_jsonData.leave).forEach(function(key)
@@ -92,7 +90,7 @@ function setupLeaveOptions()
 }
 
 //Set which panels are expanded and collapsed based on settings in JSON file
-function setupPanels()
+setupPanels = function ()
 {
 	setupPanelsHelper("panel_signature_mandatory_open", "panel_signaturemandatory");
 	setupPanelsHelper("panel_signature_optional_open", "panel_signatureoptional");
@@ -106,7 +104,7 @@ function setupPanels()
 
 
 //Helper to collapse/expand panels
-function setupPanelsHelper(p_strKey, p_strID)
+setupPanelsHelper = function (p_strKey, p_strID)
 {
 	if (g_jsonData[p_strKey]) document.getElementById(p_strID).className = "panel-collapse in";
 	else document.getElementById(p_strID).className = "panel-collapse collapse";
@@ -114,7 +112,7 @@ function setupPanelsHelper(p_strKey, p_strID)
 
 
 //Sets up the preview sections that have optional visibility based on the template selection
-function templateSelectionUpdate()
+templateSelectionUpdate = function ()
 {
 	//Get the selected template
 	//We'll read the settings from the templates section of the JSON using this value
@@ -133,7 +131,7 @@ function templateSelectionUpdate()
 
 
 //Sets up the areas affacted by a change in country
-function countrySelectionUpdate()
+countrySelectionUpdate = function ()
 {
 	//Initialise the Corporate message
 	updateTinyMCEContent();
