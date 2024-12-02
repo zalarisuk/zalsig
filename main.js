@@ -53,8 +53,7 @@
 
 //Populate the list of countries
 //This is achieved by enumerating the countries keys in the JSON
-setupCountries = function ()
-{
+setupCountries = () => {
 	let astrCountriesHTML = [];
 	Object.keys(g_jsonData.countries).forEach(function(key)
 	{
@@ -63,11 +62,9 @@ setupCountries = function ()
 	document.getElementById("INPUT-COUNTRY").innerHTML = astrCountriesHTML.join('\n');
 }
 
-
 //Populate the export templates drop down list
 //This is achieved by enumerating the templates keys in the JSON
-setupTemplates = function ()
-{
+setupTemplates = () => {
 	let strTemplatesHTML = [];
 	Object.keys(g_jsonData.templates).forEach(function(key)
 	{
@@ -76,11 +73,9 @@ setupTemplates = function ()
 	document.getElementById("INPUT-TEMPLATE").innerHTML = strTemplatesHTML.join('\n');
 }
 
-
 //Populate the list of leave options
 //This is achieved by enumerating the leave keys and name sub-values in the JSON
-setupLeaveOptions = function ()
-{
+setupLeaveOptions = () => {
 	let astrLeaveHTML = [];
 	Object.keys(g_jsonData.leave).forEach(function(key)
 	{
@@ -90,8 +85,7 @@ setupLeaveOptions = function ()
 }
 
 //Set which panels are expanded and collapsed based on settings in JSON file
-setupPanels = function ()
-{
+setupPanels = () => {
 	setupPanelsHelper("panel_signature_mandatory_open", "panel_signaturemandatory");
 	setupPanelsHelper("panel_signature_optional_open", "panel_signatureoptional");
 	setupPanelsHelper("panel_ooo_mandatory_open", "panel_ooomandatory");
@@ -102,18 +96,14 @@ setupPanels = function ()
 	setupPanelsHelper("panel_html_template_open", "panel_htmloutput");
 }
 
-
 //Helper to collapse/expand panels
-setupPanelsHelper = function (p_strKey, p_strID)
-{
+setupPanelsHelper = (p_strKey, p_strID) => {
 	if (g_jsonData[p_strKey]) document.getElementById(p_strID).className = "panel-collapse in";
 	else document.getElementById(p_strID).className = "panel-collapse collapse";
 }
 
-
 //Sets up the preview sections that have optional visibility based on the template selection
-templateSelectionUpdate = function ()
-{
+templateSelectionUpdate = () => {
 	//Get the selected template
 	//We'll read the settings from the templates section of the JSON using this value
 	let strSelectedTemplate = document.getElementById("INPUT-TEMPLATE").value;
@@ -129,10 +119,8 @@ templateSelectionUpdate = function ()
 	Preview();
 }
 
-
 //Sets up the areas affacted by a change in country
-countrySelectionUpdate = function ()
-{
+countrySelectionUpdate = () => {
 	//Initialise the Corporate message
 	updateTinyMCEContent();
 	
@@ -152,25 +140,19 @@ countrySelectionUpdate = function ()
 	Preview();
 }
 
-
-
 //Update the selection for TinMCE from the JSON settings file
-function updateTinyMCEContent()
-{
+updateTinyMCEContent = () => {
 	tinymce.get("INPUT-MESSAGE").setContent(g_jsonData.countries[document.getElementById("INPUT-COUNTRY").value].msg_corporate);
 }
 
 //Sets an objects visibility
-function setObjectVisibility(p_strObjectID, p_bMakeVisible)
-{
+setObjectVisibility = (p_strObjectID, p_bMakeVisible) => {
 	if (p_bMakeVisible) document.getElementById(p_strObjectID).style.display = 'inline';
 	else document.getElementById(p_strObjectID).style.display = 'none';
 }
 
-
 //Save input fields to cookies and feedback to user by outputting a status area update.
-function SaveSettings()
-{
+SaveSettings = () => {
 	//Signature details
 	setCookie('ZALARIS-FIRSTNAME', document.getElementById('INPUT-FIRSTNAME').value, intCookieLife);
 	setCookie('ZALARIS-SURNAME', document.getElementById('INPUT-SURNAME').value, intCookieLife);
@@ -218,10 +200,8 @@ function SaveSettings()
 	document.getElementById('status').innerHTML = 'Settings saved at ' + new Date().toLocaleString() + '.';
 }
 
-
 //Load cookie data to input fields, update the output areas and feedback to user by outputting a status area update.
-function LoadSettings()
-{
+LoadSettings = () => {
 	//Checkboxes are more of a pain as implicit conversion from text to Boolean does not occur.
 	//Instead we use a transitional variable to set each checkbox.
 	let isTrueSet;
@@ -293,46 +273,36 @@ function LoadSettings()
 	document.getElementById('status').innerHTML = 'Settings loaded at ' + new Date().toLocaleString() + '.';
 }
 
-
 //Build an e-mail address from user's first name and surname
 //Now allowing user to specify manually and this will drive whether to include or not
 //Change for v2 due to Zalaris rebranding template changes
 /*
-function BuildEmail()
-{
+BuildEmail = () => {
 	strAddress = document.getElementById('INPUT-FIRSTNAME').value.toLowerCase() + "." + document.getElementById('INPUT-SURNAME').value.toLowerCase() + g_jsonData.comms_domain;
 	return '<a href="mailto: ' + strAddress + '">' + strAddress + '</a>';
 }
 */
 
-
 //Build an e-mail address from manager's name
-function BuildManagerEmail()
-{
+BuildManagerEmail = () => {
 	strAddress = document.getElementById('INPUT-LINEMGR').value.toLowerCase().replace(' ', '.') + g_jsonData.comms_domain;
 	return '<a href="mailto: ' + strAddress + '">' + strAddress + '</a>';
 }
 
-
 //This function clears the arrays
-function ClearTemplateArrays()
-{
+ClearTemplateArrays = () => {
 	g_listTemplatesText.length = 0;
 	g_listTemplatesValue.length = 0;
 }
 
-
 //This function logically adds to the arrays in matched pairs of data
-function AddTemplate(p_strText, p_strValue)
-{
+AddTemplate = (p_strText, p_strValue) => {
 	g_listTemplatesText.push(p_strText);
 	g_listTemplatesValue.push(p_strValue);
 }
 
-
 //Populate the list of out of office options
-function PopluateTemplatesListOutOfOffice()
-{
+PopluateTemplatesListOutOfOffice = () => {
 	//Use the AddTemplate function to populate the arrays.
 	// The first entry in the arrays is the default.
 	ClearTemplateArrays();
@@ -356,25 +326,21 @@ function PopluateTemplatesListOutOfOffice()
 	//The listTemplates drop down list should now be populated
 }
 
-
 //Helper function for concatenating multiple strings into a field for display in a text area.
-function appendToTemplateField(p_strInput1, p_strInput2)
-{
+appendToTemplateField = (p_strInput1, p_strInput2) => {
 	return p_strInput1 + p_strInput2 + '\n';
 }
 
-
 //Generic set cookie
-function setCookie(p_strCookieName, p_strCookieValue, p_intExpiresAfterNDays) {
+setCookie = (p_strCookieName, p_strCookieValue, p_intExpiresAfterNDays) => {
 	var d = new Date();
 	d.setTime(d.getTime() + (p_intExpiresAfterNDays*24*60*60*1000));
 	var strExpires = "expires=" + d.toGMTString();
 	document.cookie = p_strCookieName + "=" + p_strCookieValue + ";" + strExpires + ";path=/";
 }
 
-
 //Generic retrieve cookie
-function getCookie(p_strCookieName) {
+getCookie = (p_strCookieName) => {
 	var name = p_strCookieName + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
 	var ca = decodedCookie.split(';');
@@ -390,25 +356,19 @@ function getCookie(p_strCookieName) {
 	return "";
 }
 
-
-function parseDate(strddMMMyyyy)
-{
+parseDate = (strddMMMyyyy) => {
 	var aMonths = {January:0,February:1,March:2,April:3,May:4,June:5,July:6,August:7,September:8,October:9,November:10,December:11};
 	var aDate = strddMMMyyyy.split(' ');
 	return new Date(aDate[2], aMonths[aDate[1]], aDate[0]);
 }
 
-
 //Write the output section
-function WriteOutput()
-{
+WriteOutput = () => {
 	document.getElementById('OUTPUT-HTML').value = document.getElementById('OUTPUT-PREVIEW').innerHTML;
 }
 
-
 //Update the rich output and raw HTML output areas
-function Preview()
-{
+Preview = () => {
 
 	//Set the overall style for the output area. 
 	//Necessary to override the body default from the BootStrap scaffolding library
@@ -639,9 +599,7 @@ function Preview()
 	WriteOutput();
 }
 
-
-function buildTwitterLink(p_strInput)
-{
+buildTwitterLink = (p_strInput) => {
 	let strInput = p_strInput.trim();
 	//Check if it is an @ handle
 	if (strInput.charAt(0) == "@") return "https://twitter.com/" + strInput.substr(1);
@@ -653,10 +611,8 @@ function buildTwitterLink(p_strInput)
 	return "https://twitter.com/" + strInput;
 }
 
-
 //Convert an image to Base64 format
-function getBase64Image(p_img)
-{
+getBase64Image = (p_img) => {
 	//Create a canvas and load the image into it
 	let objCanvas = document.createElement("canvas");
 	objCanvas.width = p_img.width;
@@ -673,11 +629,9 @@ function getBase64Image(p_img)
 	return strReturn;
 }
 
-
 //Export (includes download) the HTML template to an "HTM" file that the user can copy into their
 //Outlook signature folder and potentially associated images, all bundled into a ZIP file.
-function exportSettings()
-{
+exportSettings = () => {
 	//Ask the user for a signature name
 	let strName = window.prompt("Enter a file name","Signature")
 
@@ -702,10 +656,8 @@ function exportSettings()
 	});
 }
 
-
 //Preload images onto page ready for download
-function initialiseImagesForDownload()
-{
+initialiseImagesForDownload = () => {
 	//For each of the specified images the signature could use, put them into the page, in a hidden DIV (id=IMGTEMP)
 	//We need to do this at the start before the download occurs.  If we do this during the download,
 	//The code can race ahead of the page and try to access images that haven't yet been loaded.
@@ -717,9 +669,7 @@ function initialiseImagesForDownload()
 	});
 }
 
-
-function initialiseTinyMCE()
-{
+initialiseTinyMCE = () => {
 	//Not that two event functions have been added to update the preview when the editor is initialised,
 	//and when it changes content.
 	tinymce.init(
@@ -754,3 +704,5 @@ function initialiseTinyMCE()
 		content_style: 'body { font-size: 10pt; font-family: Calibri; }'
 	});
 }
+
+})();
