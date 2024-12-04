@@ -1,3 +1,4 @@
+// branch test - branch 2
 //I don't like using glbal variables, but sometimes they are a clean and simple choice
 //versus passing data all over the place
 //Global variable for holding the JSON data from the settings file (main.json)
