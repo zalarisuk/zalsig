@@ -365,7 +365,7 @@
     }
 
     //Update the rich output and raw HTML output areas
-    Preview = () {
+    function Preview() {
     
         //Set the overall style for the output area. 
         //Necessary to override the body default from the BootStrap scaffolding library
