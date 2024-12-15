@@ -45,7 +45,7 @@ const ZPH = (function () {
     //Preload the hidden images for the download option
     initialiseImagesForDownload();
 
-    ////Preview();
+    Preview();
 
 
 
