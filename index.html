@@ -6,19 +6,19 @@
 	<script>
 
 	</script>
-
-    <!-- THIRD PARTY LIBRARIES -->
-    <!-- For collapsible panels see - https://www.w3schools.com/bootstrap/bootstrap_collapse.asp -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Allows saving of signature files -->
-    <script type="text/javascript" src='filesaver.min.js'></script>
-    <script type="text/javascript" src='jszip.min.js'></script>
-    <!-- TinyMCE editor for corporate message editing -->
-    <script type="text/javascript" src='tinymce/tinymce.min.js'></script>
-      
-    <script src="main.js"></script>
+	<script src="main.js"></script>
+	
+	<!-- THIRD PARTY LIBRARIES -->
+	<!-- For collapsible panels see - https://www.w3schools.com/bootstrap/bootstrap_collapse.asp -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Allows saving of signature files -->
+	<script type="text/javascript" src='filesaver.min.js'></script>
+	<script type="text/javascript" src='jszip.min.js'></script>
+	<!-- TinyMCE editor for corporate message editing -->
+	<script type="text/javascript" src='tinymce/tinymce.min.js'></script>
+	<script type="text/javascript">initialiseTinyMCE()</script>
 </head>
 
 <body>
@@ -55,19 +55,19 @@
 				<table border="0">
 					<tr>
 						<td width="190px"><strong>First Name:</strong></td>
-						<td><input ID="INPUT-FIRSTNAME" type="text" size="60" onKeyUp="ZPH.ZPH.Preview();" class="mandatory" title="Enter your forename as it appears in your e-mail address."></input></td>
+						<td><input ID="INPUT-FIRSTNAME" type="text" size="60" onKeyUp="Preview();" class="mandatory" title="Enter your forename as it appears in your e-mail address."></input></td>
 					</tr>
 					<tr>
 						<td><strong>Surname:</strong></td>
-						<td><input ID="INPUT-SURNAME" type="text" size="60" onKeyUp="ZPH.ZPH.Preview();" class="mandatory" title="Enter your surname."></input></td>
+						<td><input ID="INPUT-SURNAME" type="text" size="60" onKeyUp="Preview();" class="mandatory" title="Enter your surname."></input></td>
 					</tr>
 					<tr>
 						<td><strong>Designation/Job Title:</strong></td>
-						<td><input ID="INPUT-JOBTITLE" type="text" size="60" value="" onKeyUp="ZPH.ZPH.Preview();" class="mandatory" title="Enter your official job title. e.g. SuccessFactors Consultant"></input></td>
+						<td><input ID="INPUT-JOBTITLE" type="text" size="60" value="" onKeyUp="Preview();" class="mandatory" title="Enter your official job title. e.g. SuccessFactors Consultant"></input></td>
 					</tr>
 					<tr>
 						<td><strong>Country:</strong></td>
-						<td><select id="INPUT-COUNTRY" onChange="ZPH.countrySelectionUpdate();" class="mandatory" title="Select the Zalaris country operation that you work for." style="width:180px"><option>Loading...</option></select></td>
+						<td><select id="INPUT-COUNTRY" onChange="countrySelectionUpdate();" class="mandatory" title="Select the Zalaris country operation that you work for." style="width:180px"><option>Loading...</option></select></td>
 					</tr>
 				</table>
 			</div>
@@ -87,8 +87,8 @@
 					<tr>
 						<td><strong>Mobile Number:</strong></td>
 						<td>
-							<input ID="INPUT-DIALCODE" type="text" size="4" onKeyUp="ZPH.Preview();" class="sigoptional" title="Enter your international dialling code." value=""></input>
-							<input ID="INPUT-MOBILE" type="text" size="50" onKeyUp="ZPH.Preview();" class="sigoptional" title="Enter your mobile phone number excluding the international dialling code." value=""></input>
+							<input ID="INPUT-DIALCODE" type="text" size="4" onKeyUp="Preview();" class="sigoptional" title="Enter your international dialling code." value=""></input>
+							<input ID="INPUT-MOBILE" type="text" size="50" onKeyUp="Preview();" class="sigoptional" title="Enter your mobile phone number excluding the international dialling code." value=""></input>
 						</td>
 					</tr>
 					<tr>
@@ -101,23 +101,23 @@
 					</tr>
 					<tr>
 						<td><strong>E-mail Address:</strong></td>
-						<td><input ID="INPUT-EMAIL" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Complete this if you would like to include your e-mail address in the signature."></input></td>
+						<td><input ID="INPUT-EMAIL" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Complete this if you would like to include your e-mail address in the signature."></input></td>
 					</tr>
 					<tr>
 						<td><strong>LinkedIn URL:</strong></td>
-						<td><input ID="INPUT-LINKEDIN" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Visit your LinkedIn profile, choose the option to share and copy the resulting URL."></input></td>
+						<td><input ID="INPUT-LINKEDIN" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Visit your LinkedIn profile, choose the option to share and copy the resulting URL."></input></td>
 					</tr>
 					<tr>
 						<td><strong>Xing URL:</strong></td>
-						<td><input ID="INPUT-XING" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Visit your Xing profile, choose the option to share and copy the resulting URL."></input></td>
+						<td><input ID="INPUT-XING" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Visit your Xing profile, choose the option to share and copy the resulting URL."></input></td>
 					</tr>
 					<tr>
 						<td><strong>Twitter Handle:</strong></td>
-						<td><input ID="INPUT-TWITTER" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Enter your personal Twitter page link, or just your Twitter handle."></input></td>
+						<td><input ID="INPUT-TWITTER" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Enter your personal Twitter page link, or just your Twitter handle."></input></td>
 					</tr>
 					<tr>
 						<td><strong>SCN Profile URL:</strong></td>
-						<td><input ID="INPUT-SCN" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Copy the URL from your browser location bar whilst viewing your SAP Community Network profile."></input></td>
+						<td><input ID="INPUT-SCN" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Copy the URL from your browser location bar whilst viewing your SAP Community Network profile."></input></td>
 					</tr>
 					<tr>
 						<td width="240px" height="30px"></td>
@@ -129,18 +129,18 @@
 					</tr>
 					<tr>
 						<td><strong>Working Hours:</strong></td>
-						<td><input ID="INPUT-HOURS" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Specify what days/hours you work - e.g. Monday, Tuesday, Wednesday 09:00 - 17:00."></input></td>
+						<td><input ID="INPUT-HOURS" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Specify what days/hours you work - e.g. Monday, Tuesday, Wednesday 09:00 - 17:00."></input></td>
 					</tr>
 					<tr>
 						<td colspan="2"><br><h4>Book a Meeting With</h4></td>
 					</tr>
 					<tr>
 						<td><strong>Text to Display:</strong></td>
-						<td><input ID="INPUT-MEETING-TEXT" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Specify the text to display - e.g. Book a meeting with Jane."></input></td>
+						<td><input ID="INPUT-MEETING-TEXT" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Specify the text to display - e.g. Book a meeting with Jane."></input></td>
 					</tr>
 					<tr>
 						<td><strong>Calendly Link:</strong></td>
-						<td><input ID="INPUT-MEETING-LINK" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Specify your Calendly booking URL."></input></td>
+						<td><input ID="INPUT-MEETING-LINK" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Specify your Calendly booking URL."></input></td>
 					</tr>
 					<tr>
 						<td colspan="2"><br><h4>Optional Sign-off</h4></td>
@@ -151,11 +151,11 @@
 					</tr>
 					<tr>
 						<td><strong>Sign-Off Phrase:</strong></td>
-						<td><input ID="INPUT-SIGNOFF" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Enter something like 'Kind regards.' if you wish to include that and your preferred name into the sign off."></input></td>
+						<td><input ID="INPUT-SIGNOFF" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Enter something like 'Kind regards.' if you wish to include that and your preferred name into the sign off."></input></td>
 					</tr>
 					<tr>
 						<td width="190px"><strong>Preferred Name:</strong></td>
-						<td><input ID="INPUT-PREFNAME" type="text" size="60" onKeyUp="ZPH.Preview();" class="sigoptional" title="Enter the name you would like to sign off your e-mails with - e.g. maybe you prefer using Liz to Elizabeth, or Jon to Jonathan."></input></td>
+						<td><input ID="INPUT-PREFNAME" type="text" size="60" onKeyUp="Preview();" class="sigoptional" title="Enter the name you would like to sign off your e-mails with - e.g. maybe you prefer using Liz to Elizabeth, or Jon to Jonathan."></input></td>
 					</tr>
 						<td colspan="2"><br><h4>Optional Corporate</h4></td>
 					</tr>
@@ -165,7 +165,7 @@
 					</tr>
 					<tr>
 						<td width="240px"><strong>Combine Web Site and Social:</strong></td>
-						<td><input type="checkbox" ID="INPUT-CORP-WEB-SOCIAL-COMBINE" value="false" onchange="ZPH.Preview();" title="Select to place the Zalaris web site on the same line as the company social media accounts." checked></input></td>
+						<td><input type="checkbox" ID="INPUT-CORP-WEB-SOCIAL-COMBINE" value="false" onchange="Preview();" title="Select to place the Zalaris web site on the same line as the company social media accounts." checked></input></td>
 					</tr>
 				</table>
 			</div>
@@ -183,14 +183,14 @@
 				<table border="0">
 					<tr>
 						<td width="190px"><strong>Line Manager Name:</strong></td>
-						<td colspan="2"><input ID="INPUT-LINEMGR" type="text" size="60" onKeyUp="ZPH.Preview();" class="ooomandatory" title="Specify the first name and surname of your line manager or an alternative contact. Note, this is also used to generate their e-mail address."></input></td>
+						<td colspan="2"><input ID="INPUT-LINEMGR" type="text" size="60" onKeyUp="Preview();" class="ooomandatory" title="Specify the first name and surname of your line manager or an alternative contact. Note, this is also used to generate their e-mail address."></input></td>
 					</tr>
 					<tr>
 						<td width="190px"><strong>Out of Office Start Date:</strong></td>
 						<td>
-							<input ID="INPUT-OOOSD-DD" type="text" size="2" onKeyUp="ZPH.Preview();" class="ooomandatory" title="Specify the day of the month as a digit. e.g. 10"></input>&nbsp;
+							<input ID="INPUT-OOOSD-DD" type="text" size="2" onKeyUp="Preview();" class="ooomandatory" title="Specify the day of the month as a digit. e.g. 10"></input>&nbsp;
 
-							<select ID="INPUT-OOOSD-MMM" class="ooomandatory" onChange="ZPH.Preview();" title="Select a month.">
+							<select ID="INPUT-OOOSD-MMM" class="ooomandatory" onChange="Preview();" title="Select a month.">
 								<option value="January">January</option>
 								<option value="February">February</option>
 								<option value="March">March</option>
@@ -205,16 +205,16 @@
 								<option value="December">December</option>
 							</select>&nbsp;
 
-							<input ID="INPUT-OOOSD-YYYY" type="text" size="4" onKeyUp="ZPH.Preview();" class="ooomandatory" title="Specify the year as four digits. e.g. 2020"></input>
+							<input ID="INPUT-OOOSD-YYYY" type="text" size="4" onKeyUp="Preview();" class="ooomandatory" title="Specify the year as four digits. e.g. 2020"></input>
 						</td>
 						<td> </td>
 					</tr>
 					<tr>
 						<td><strong>Out of Office End Date:</strong></td>
 						<td>
-							<input ID="INPUT-OOOED-DD" type="text" size="2" onKeyUp="ZPH.Preview();" class="ooomandatory" title="Specify the day of the month as a digit. e.g. 10"></input>&nbsp;
+							<input ID="INPUT-OOOED-DD" type="text" size="2" onKeyUp="Preview();" class="ooomandatory" title="Specify the day of the month as a digit. e.g. 10"></input>&nbsp;
 
-							<select ID="INPUT-OOOED-MMM" class="ooomandatory" onChange="ZPH.Preview();" title="Select a month.">
+							<select ID="INPUT-OOOED-MMM" class="ooomandatory" onChange="Preview();" title="Select a month.">
 								<option value="January">January</option>
 								<option value="February">February</option>
 								<option value="March">March</option>
@@ -229,7 +229,7 @@
 								<option value="December">December</option>
 							</select>&nbsp;
 
-							<input ID="INPUT-OOOED-YYYY" type="text" size="4" onKeyUp="ZPH.Preview();" class="ooomandatory" title="Specify the year as four digits. e.g. 2020"></input>
+							<input ID="INPUT-OOOED-YYYY" type="text" size="4" onKeyUp="Preview();" class="ooomandatory" title="Specify the year as four digits. e.g. 2020"></input>
 						</td>
 						<td>&nbsp;<span ID="RETURNDATE"></span></td>
 					</tr>
@@ -252,7 +252,7 @@
 					<tr>
 						<td width="240px"><strong>Leave Type:</strong></td>
 						<td>
-							<select id="INPUT-TYPEOFLEAVE" onchange="ZPH.Preview();" title="Select the type of leave being taken.">
+							<select id="INPUT-TYPEOFLEAVE" onchange="Preview();" title="Select the type of leave being taken.">
 								<!-- Options populated from JSON -->
 							</select>
 						</td>
@@ -267,7 +267,7 @@
 					</tr>
 					<tr>
 						<td width="240px"><strong>Enable Available in Urgent Cases:</strong></td>
-						<td><input type="checkbox" ID="URGENCYMSG" value="false" onchange="ZPH.countrySelectionUpdate();" title="Select to enable the 'if urgent, you can contact me on' element in your out of office message."></input></td>
+						<td><input type="checkbox" ID="URGENCYMSG" value="false" onchange="countrySelectionUpdate();" title="Select to enable the 'if urgent, you can contact me on' element in your out of office message."></input></td>
 					</tr>
 					<tr>
 						<td width="240px" height="30px"></td>
@@ -279,7 +279,7 @@
 					</tr>
 					<tr>
 						<td width="240px"><strong>Enable Support Message:</strong></td>
-						<td><input type="checkbox" ID="SUPPORTMSG" value="false" onchange="ZPH.countrySelectionUpdate();" title="Select to enable the standard support team information in your out of office message."></input></td>
+						<td><input type="checkbox" ID="SUPPORTMSG" value="false" onchange="countrySelectionUpdate();" title="Select to enable the standard support team information in your out of office message."></input></td>
 					</tr>
 				</table>
 				<p>
@@ -306,7 +306,7 @@
 					</tr>
 					<tr>
 						<td width="240px"><strong>Enable Upcoming Leave Message:</strong></td>
-						<td><input type="checkbox" ID="AWAYMSG" value="false" onchange="ZPH.Preview();" title="Enable to display a notice about upcoming leave in your email signature."></input></td>
+						<td><input type="checkbox" ID="AWAYMSG" value="false" onchange="Preview();" title="Enable to display a notice about upcoming leave in your email signature."></input></td>
 					</tr>
 					<tr>
 						<td width="240px" height="30px"></td>
@@ -318,7 +318,7 @@
 					</tr>
 					<tr>
 						<td width="240px"><strong>Enable Country Message:</strong></td>
-						<td><input type="checkbox" ID="OPTMSG" value="false" onchange="ZPH.Preview();" title="Select to enable the inclusion of the (editable) message below."></input></td>
+						<td><input type="checkbox" ID="OPTMSG" value="false" onchange="Preview();" title="Select to enable the inclusion of the (editable) message below."></input></td>
 					</tr>
 					<tr>
 						<td width="240px" height="5px"></td>
@@ -327,7 +327,7 @@
 				</table>
 
 				<!-- TinyMCE editor (replacement for ckeditor) -->
-				<textarea id="INPUT-MESSAGE" onChange="ZPH.Preview();" title="Amend the country message by editing it here. This can also be used for local or global team content by just overtyping the content."></textarea>
+				<textarea id="INPUT-MESSAGE" onChange="Preview();" title="Amend the country message by editing it here. This can also be used for local or global team content by just overtyping the content."></textarea>
 
 			</div>
 		</div>
@@ -342,8 +342,8 @@
 				<p>Select the <em>Save</em> button to save your current data to a set of browser cookies. You can then load them in again next time using the <em>Load Settings</em> button assuming that you are on the same computer, using the same browser, and that you have not cleared your browser cookies.</p>
 
 				<p>
-					<button type="button" onclick="ZPH.SaveSettings();">Save Settings</button>&nbsp;
-					<button type="button" onclick="ZPH.LoadSettings();">Load Settings</button>
+					<button type="button" onclick="SaveSettings();">Save Settings</button>&nbsp;
+					<button type="button" onclick="LoadSettings();">Load Settings</button>
 				</p>
 
 				<table border="0">
@@ -376,7 +376,7 @@
 							<table border="0">
 								<tr>
 									<td><strong>Template:</strong>
-									<select id="INPUT-TEMPLATE" onChange="ZPH.templateSelectionUpdate();" title="Select a template"><option>Loading...</option></select></td>
+									<select id="INPUT-TEMPLATE" onChange="templateSelectionUpdate();" title="Select a template"><option>Loading...</option></select></td>
 								</tr>
 							</table>
 						</td>
@@ -462,7 +462,7 @@
 				<p class="cut-bottom">- &#9986; - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
 
 				<p>
-					<button type="button" onclick="ZPH.exportSettings();">Export to File</button>
+					<button type="button" onclick="exportSettings();">Export to File</button>
 				</p>
 			</div>
 		</div>
@@ -487,6 +487,11 @@
 
 <!-- This hidden section will contain the images for download. -->
 <div id="IMGTEMP" style="visibility: hidden;"></div>
+
+<script>
+	//Initialise "all the things"
+	main();
+</script>
 
 </body>
 </html>
